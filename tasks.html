@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ongoing Monitoring Task Log</title>
+    <style>
+        /* Basic styling */
+        .group {
+            margin: 10px 0;
+        }
+        .tasks {
+            display: none; /* Initially hide the tasks */
+            margin-left: 20px;
+        }
+        .group-title {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="group">
+        <div class="group-title">1st Group</div>
+        <div class="tasks">
+            <div>Task 1</div>
+            <div>Task 2</div>
+        </div>
+    </div>
+
+    <div class="group">
+        <div class="group-title">2nd Group</div>
+        <div class="tasks">
+            <div>Task 1</div>
+            <div>Task 2</div>
+        </div>
+    </div>
+
+    <div class="group">
+        <div class="group-title">3rd Group</div>
+        <div class="tasks">
+            <div>Task 1</div>
+            <div>Task 2</div>
+        </div>
+    </div>
+
+    <!-- Add more groups as needed -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.group-title').click(function() {
+                $(this).next('.tasks').slideToggle(); // Toggle the display of tasks
+            });
+        });
+    </script>
+
+</body>
+</html>
